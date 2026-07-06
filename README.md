@@ -1,4 +1,4 @@
-﻿# DSA Bloom
+﻿# DSA Verse
 
 A premium DSA revision website built with React, Vite, Tailwind CSS, React Router, Framer Motion, and Lucide React.
 
