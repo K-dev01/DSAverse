@@ -4,8 +4,8 @@ import { navLinks } from '../data/navLinks'
 
 function Footer() {
   return (
-    <footer className="border-t px-6 py-10 text-[var(--muted)] sm:px-8" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
-      <div className="mx-auto flex max-w-7xl flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+    <footer className="border-t px-4 py-8 text-[var(--muted)] sm:px-6 sm:py-10 md:px-8" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
             DSA Verse

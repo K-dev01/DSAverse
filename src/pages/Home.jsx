@@ -38,18 +38,18 @@ function Home() {
   const [search, setSearch] = useState('')
 
   return (
-    <section className="space-y-16 py-16 text-slate-900 dark:text-slate-100">
+    <section className="space-y-10 py-8 text-slate-900 dark:text-slate-100 sm:space-y-12 sm:py-10 lg:space-y-16 lg:py-16">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="rounded-[2rem] border bg-[var(--surface)] p-10 shadow-soft"
+        className="rounded-[2rem] border bg-[var(--surface)] p-6 shadow-soft sm:p-8 lg:p-10"
         style={{ borderColor: 'var(--card-border)' }}
       >
         <div className="mx-auto max-w-5xl space-y-6">
           <div className="space-y-4">
             <p className="text-sm font-semibold uppercase tracking-[0.35em] text-[var(--primary)]">Developer DSA reference</p>
-            <h1 className="text-4xl font-semibold tracking-tight text-[var(--text)] sm:text-5xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-[var(--text)] sm:text-4xl lg:text-5xl">
               A cleaner, faster way to review data structures and algorithms.
             </h1>
             <p className="max-w-2xl text-base leading-8 text-[var(--muted)] sm:text-lg">
@@ -57,8 +57,8 @@ function Home() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-[1fr_auto]">
-            <label className="relative block w-full">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center">
+            <label className="relative block w-full lg:flex-1">
               <span className="sr-only">Search documentation</span>
               <div className="flex items-center gap-3 rounded-[1.5rem] border bg-[var(--surface-soft)] px-4 py-3 shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition focus-within:border-[var(--primary)]" style={{ borderColor: 'var(--card-border)' }}>
                 <Search className="h-5 w-5 text-[var(--primary)]" />
@@ -70,11 +70,11 @@ function Home() {
                 />
               </div>
             </label>
-            <div className="flex flex-wrap gap-3">
-              <Button as={Link} to="/stl-library" className="rounded-3xl px-5 py-3 text-sm">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-nowrap">
+              <Button as={Link} to="/stl-library" className="w-full rounded-3xl px-5 py-3 text-sm sm:w-auto">
                 Browse library
               </Button>
-              <Button as={Link} to="/downloads" variant="secondary" className="rounded-3xl px-5 py-3 text-sm">
+              <Button as={Link} to="/downloads" variant="secondary" className="w-full rounded-3xl px-5 py-3 text-sm sm:w-auto">
                 Download sheets
               </Button>
             </div>
@@ -113,7 +113,7 @@ function Home() {
           <h2 className="mt-3 text-2xl font-semibold text-[var(--text)]">Your current study plan.</h2>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           {continueItems.map((title) => (
             <motion.div
               key={title}
@@ -141,7 +141,7 @@ function Home() {
           <h2 className="mt-3 text-2xl font-semibold text-[var(--text)]">Trusted guides for quick reference.</h2>
         </div>
 
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {popularResources.map((resource) => (
             <motion.div
               key={resource.title}
@@ -163,8 +163,8 @@ function Home() {
         </div>
       </section>
 
-      <section className="rounded-[2rem] border bg-[var(--surface)] p-10 shadow-soft" style={{ borderColor: 'var(--card-border)' }}>
-        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+      <section className="rounded-[2rem] border bg-[var(--surface)] p-6 shadow-soft sm:p-8 lg:p-10" style={{ borderColor: 'var(--card-border)' }}>
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-8">
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold text-[var(--primary)]" style={{ background: 'var(--primary-soft)', borderColor: 'var(--card-border)' }}>
               <Clock3 size={18} />
@@ -185,7 +185,7 @@ function Home() {
                 key={step}
                 whileHover={{ x: 4 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="rounded-[1.75rem] border bg-[var(--surface-soft)] p-5"
+                className="rounded-[1.75rem] border bg-[var(--surface-soft)] p-4 sm:p-5"
                 style={{ borderColor: 'var(--card-border)' }}
               >
                 <div className="flex items-center gap-3 text-sm font-semibold text-[var(--text)]">

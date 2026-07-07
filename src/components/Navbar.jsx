@@ -11,8 +11,8 @@ function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b bg-[var(--surface)]/90 transition duration-300" style={{ borderColor: 'var(--card-border)' }}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3 sm:px-8">
-        <Link to="/" className="text-lg font-semibold tracking-tight text-[var(--text)]">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:gap-6 sm:px-6 md:px-8">
+        <Link to="/" className="text-base font-semibold tracking-tight text-[var(--text)] sm:text-lg">
           DSA Verse
         </Link>
 
@@ -47,7 +47,7 @@ function Navbar() {
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md bg-[var(--surface)] text-[var(--text)] shadow-sm border md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border bg-[var(--surface)] text-[var(--text)] shadow-sm md:hidden"
             onClick={() => setOpen((value) => !value)}
             aria-label="Open navigation menu"
             style={{ borderColor: 'var(--card-border)' }}
@@ -58,7 +58,7 @@ function Navbar() {
       </div>
 
       {open ? (
-        <div className="border-t px-6 py-5 md:hidden" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
+        <div className="border-t px-4 py-5 sm:px-6 md:hidden" style={{ borderColor: 'var(--card-border)', background: 'var(--surface)' }}>
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <NavLink
