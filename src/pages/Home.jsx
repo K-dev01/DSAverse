@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Search, BookOpen, Layers, ClipboardList, FileText, Sparkles, ShieldCheck, Clock3 } from 'lucide-react'
 import Button from '../components/Button'
+import StudyPlanGenerator from '../components/StudyPlanGenerator'
 
 const quickLinks = [
   { title: 'STL Library', to: '/stl-library', description: 'Browse standard container and algorithm notes.', icon: BookOpen },
@@ -134,6 +135,8 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <StudyPlanGenerator />
 
       <section className="space-y-6">
         <div>
